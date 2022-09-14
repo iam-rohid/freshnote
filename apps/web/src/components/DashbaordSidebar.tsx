@@ -1,8 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { MdContentCopy, MdSearch, MdSettings, MdStar } from "react-icons/md";
 import Tooltip from "./Tooltip";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCog,
+  faNoteSticky,
+  faSearch,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 
 const DashbaordSidebar = () => {
   const router = useRouter();
@@ -18,7 +24,7 @@ const DashbaordSidebar = () => {
                     router.asPath.split("/")[2] === "notebooks" ? "active" : ""
                   }`}
                 >
-                  <MdContentCopy />
+                  <FontAwesomeIcon icon={faNoteSticky} />
                 </a>
               </Link>
             </li>
@@ -26,7 +32,7 @@ const DashbaordSidebar = () => {
           <Tooltip side="right" label="Search">
             <li>
               <button className="menu-item">
-                <MdSearch />
+                <FontAwesomeIcon icon={faSearch} />
               </button>
             </li>
           </Tooltip>
@@ -38,7 +44,7 @@ const DashbaordSidebar = () => {
                     router.asPath.split("/")[2] === "favorites" ? "active" : ""
                   }`}
                 >
-                  <MdStar />
+                  <FontAwesomeIcon icon={faStar} />
                 </a>
               </Link>
             </li>
@@ -51,7 +57,7 @@ const DashbaordSidebar = () => {
                     router.asPath.split("/")[2] === "settings" ? "active" : ""
                   }`}
                 >
-                  <MdSettings />
+                  <FontAwesomeIcon icon={faCog} />
                 </a>
               </Link>
             </li>
