@@ -1,10 +1,10 @@
-import DashbaordLayout from "@/layouts/DashbaordLayout";
+import ProjectLayout from "@/layouts/ProjectLayout";
 import { CustomNextPage } from "@/types/next";
 
 const FavoritesPage: CustomNextPage = () => {
   return <div>FavoritesPage</div>;
 };
 
-FavoritesPage.getLayout = (page) => <DashbaordLayout>{page}</DashbaordLayout>;
+FavoritesPage.getLayout = (page) => <ProjectLayout>{page}</ProjectLayout>;
 
 export default FavoritesPage;

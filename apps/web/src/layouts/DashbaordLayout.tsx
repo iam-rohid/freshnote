@@ -1,4 +1,5 @@
-import DashbaordSidebar from "@/components/DashbaordSidebar";
+import DashbaordHeader from "@/components/DashbaordHeader";
+import DashboardSidebar from "@/components/DashboardSidebar";
 import { FC, ReactNode } from "react";
 
 export interface DashbaordLayoutProps {
@@ -8,10 +9,13 @@ export interface DashbaordLayoutProps {
 const DashbaordLayout: FC<DashbaordLayoutProps> = (props) => {
   const { children } = props;
   return (
-    <div className="dashboard-layout">
-      <DashbaordSidebar />
-      <main className="dashboard-body">{children}</main>
-    </div>
+    <>
+      <DashboardSidebar />
+      <div className="ml-64">
+        <DashbaordHeader />
+        {children}
+      </div>
+    </>
   );
 };
 

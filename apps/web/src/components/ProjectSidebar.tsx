@@ -5,18 +5,18 @@ import Tooltip from "./Tooltip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCog,
-  faNoteSticky,
+  faFolderOpen,
   faSearch,
   faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
-const DashbaordSidebar = () => {
+const ProjectSidebar = () => {
   const router = useRouter();
   return (
-    <aside className="dashboard-sidebar">
+    <aside className="project-sidebar">
       <nav className="main-menu">
         <ul className="menu-list">
-          <Tooltip side="right" label="Notebooks">
+          <Tooltip side="right" label="File Explorer">
             <li>
               <Link href="notebooks" passHref>
                 <a
@@ -24,7 +24,7 @@ const DashbaordSidebar = () => {
                     router.asPath.split("/")[2] === "notebooks" ? "active" : ""
                   }`}
                 >
-                  <FontAwesomeIcon icon={faNoteSticky} />
+                  <FontAwesomeIcon icon={faFolderOpen} />
                 </a>
               </Link>
             </li>
@@ -49,6 +49,10 @@ const DashbaordSidebar = () => {
               </Link>
             </li>
           </Tooltip>
+        </ul>
+      </nav>
+      <div className="secondary-menu">
+        <ul className="menu-list">
           <Tooltip side="right" label="Settigns">
             <li>
               <Link href="settings">
@@ -63,7 +67,7 @@ const DashbaordSidebar = () => {
             </li>
           </Tooltip>
         </ul>
-      </nav>
+      </div>
       <button className="thumb-btn">
         <figure className="avatar">
           <Image
@@ -81,4 +85,4 @@ const DashbaordSidebar = () => {
   );
 };
 
-export default DashbaordSidebar;
+export default ProjectSidebar;

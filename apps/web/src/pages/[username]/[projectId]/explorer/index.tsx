@@ -1,8 +1,8 @@
 import NotebooksSidebar from "@/components/NotebooksSidebar";
-import DashbaordLayout from "@/layouts/DashbaordLayout";
+import ProjectLayout from "@/layouts/ProjectLayout";
 import { CustomNextPage } from "@/types/next";
 
-const NotebooksPage: CustomNextPage = () => {
+const Explorer: CustomNextPage = () => {
   return (
     <>
       <NotebooksSidebar />
@@ -11,6 +11,6 @@ const NotebooksPage: CustomNextPage = () => {
   );
 };
 
-NotebooksPage.getLayout = (page) => <DashbaordLayout>{page}</DashbaordLayout>;
+Explorer.getLayout = (page) => <ProjectLayout>{page}</ProjectLayout>;
 
-export default NotebooksPage;
+export default Explorer;

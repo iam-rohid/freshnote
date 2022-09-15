@@ -1,10 +1,10 @@
-import DashbaordLayout from "@/layouts/DashbaordLayout";
+import ProjectLayout from "@/layouts/ProjectLayout";
 import { CustomNextPage } from "@/types/next";
 
 const SettingsPage: CustomNextPage = () => {
   return <div>SettingsPage</div>;
 };
 
-SettingsPage.getLayout = (page) => <DashbaordLayout>{page}</DashbaordLayout>;
+SettingsPage.getLayout = (page) => <ProjectLayout>{page}</ProjectLayout>;
 
 export default SettingsPage;
